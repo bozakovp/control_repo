@@ -1,4 +1,4 @@
-node master.lan {
+node default {
   file {'/root/README':
     ensure => file,
   }
