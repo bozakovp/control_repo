@@ -1,7 +1,7 @@
 node default {
 }
 
-node master.lan {
+node master.puppet.vm {
   include role::master_server
 }
 
