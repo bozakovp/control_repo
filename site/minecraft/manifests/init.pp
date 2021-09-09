@@ -9,10 +9,7 @@ class minecraft (
     ensure => file,
     source => '$url,
   }
-  file { "${install_dir}/eula.txt":
-    ensure => file,
-    content => 'eula=true',
-  }
+
   file {'/etc/systemd/system/minecraft.service':
     ensure => file,
     content => epp('minecraft/minecraft.service',{
