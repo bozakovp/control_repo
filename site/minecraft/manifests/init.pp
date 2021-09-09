@@ -7,9 +7,12 @@ class minecraft (
   }
   file { "${install_dir}/minecraft_server.jar":
     ensure => file,
-    source => '$url,
+    source => $url,
   }
-
+  file { "${install_dir}/eula.txt":
+    ensure => file,
+    content => 'eula=true',
+  }
   file {'/etc/systemd/system/minecraft.service':
     ensure => file,
     content => epp('minecraft/minecraft.service',{
