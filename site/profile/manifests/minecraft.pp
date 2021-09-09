@@ -1,5 +1,5 @@
 class profile::minecraft {
-  class {'minecraft': {
+  class {'minecraft':
     install_dir => '/opt/minecraft_parameter',
   }
 }
