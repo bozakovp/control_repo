@@ -5,12 +5,12 @@ class minecraft (
   file {'$instasll_dir':
     ensure => directory,
 
-  file {"${install_dir}/minecraft_server.jar":
+  file { "${install_dir}/minecraft_server.jar":
     ensure => file,
     source => '$url,
     before => Service ['minecraft'],
   }
-  file {"${install_dir}/eula.txt":
+  file { "${install_dir}/eula.txt":
     ensure => file,
     content => 'eula=true'
   }
